@@ -1,0 +1,230 @@
+/* ---------- Google Font ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:#fff;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#111827;
+    position:fixed;
+    left:0;
+    top:0;
+    padding:20px;
+    overflow:auto;
+    box-shadow:4px 0 15px rgba(0,0,0,.4);
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:3px solid #00e5ff;
+    margin-bottom:10px;
+}
+
+.logo h2{
+    font-size:22px;
+    color:#00e5ff;
+}
+
+/* ---------- Menu ---------- */
+.sidebar a{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    padding:14px 18px;
+    margin:12px 0;
+    border-radius:12px;
+    background:#1f2937;
+    transition:.4s;
+    font-size:17px;
+}
+
+.sidebar a i{
+    margin-right:10px;
+}
+
+.sidebar a:hover,
+.sidebar a.active{
+    background:#00e5ff;
+    color:#000;
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #00e5ff;
+}
+
+/* ---------- Main ---------- */
+.main{
+    margin-left:250px;
+    width:calc(100% - 250px);
+}
+
+/* ---------- Hero ---------- */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:100vh;
+    padding:60px;
+    gap:40px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:52px;
+    color:#00e5ff;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#00e5ff;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:40px;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #00e5ff;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:520px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,229,255,.5);
+}
+
+/* ---------- Sections ---------- */
+section{
+    padding:70px 60px;
+}
+
+section h2{
+    text-align:center;
+    color:#00e5ff;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+/* ---------- Cards ---------- */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    transition:.4s;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#00e5ff;
+    margin-bottom:10px;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+.card i{
+    color:#00e5ff;
+    margin-bottom:15px;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff;
+}
+
+/* ---------- Footer ---------- */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#111827;
+    color:#ddd;
+    margin-top:40px;
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+    }
+
+    .main{
+        margin-left:0;
+        width:100%;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:30px;
+    }
+
+    .hero-text h1{
+        font-size:38px;
+    }
+
+    section{
+        padding:40px 20px;
+    }
+}

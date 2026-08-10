@@ -1,0 +1,289 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#fff;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#111827;
+    position:fixed;
+    left:0;
+    top:0;
+    padding:20px;
+    overflow:auto;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:3px solid #00ffff;
+    margin-bottom:10px;
+}
+
+.logo h2{
+    color:#00ffff;
+    font-size:22px;
+}
+
+.sidebar a{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    background:#1f2937;
+    padding:14px 18px;
+    margin:12px 0;
+    border-radius:12px;
+    transition:.4s;
+}
+
+.sidebar a i{
+    margin-right:10px;
+}
+
+.sidebar a:hover,
+.sidebar a.active{
+    background:#00ffff;
+    color:#000;
+    box-shadow:0 0 10px #00ffff,
+               0 0 20px #00ffff,
+               0 0 40px #00ffff;
+}
+
+/* Main */
+
+.main{
+    margin-left:250px;
+    width:calc(100% - 250px);
+}
+
+.contact{
+    padding:60px;
+}
+
+.contact h1{
+    text-align:center;
+    color:#00ffff;
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:18px;
+}
+
+.contact-container{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+/* Contact Form */
+
+.contact-form{
+    flex:1;
+    background:rgba(255,255,255,.1);
+    padding:30px;
+    border-radius:15px;
+}
+
+.contact-form h2{
+    margin-bottom:20px;
+    color:#00ffff;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+.btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    background:#00ffff;
+    color:#000;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.btn:hover{
+    box-shadow:0 0 10px #00ffff,
+               0 0 20px #00ffff,
+               0 0 40px #00ffff;
+    transform:scale(1.03);
+}
+
+/* Contact Info */
+
+.contact-info{
+    flex:1;
+    background:rgba(255,255,255,.1);
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.contact-info img{
+    width:100%;
+    max-height:260px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.contact-info h2{
+    color:#00ffff;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    text-align:left;
+    margin:15px 0;
+    line-height:1.8;
+}
+
+.contact-info i{
+    color:#00ffff;
+    margin-right:10px;
+}
+
+.social{
+    margin-top:20px;
+}
+
+.social a{
+    display:inline-block;
+    width:45px;
+    height:45px;
+    line-height:45px;
+    margin:8px;
+    border-radius:50%;
+    background:#00ffff;
+    color:#000;
+    font-size:20px;
+    transition:.4s;
+}
+
+.social a:hover{
+    transform:scale(1.2);
+    box-shadow:0 0 10px #00ffff,
+               0 0 20px #00ffff;
+}
+
+/* Instrument Cards */
+
+.instruments{
+    padding:60px;
+}
+
+.instruments h2{
+    text-align:center;
+    color:#00ffff;
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.1);
+    border-radius:15px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    text-align:center;
+    padding:15px;
+    color:#00ffff;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px #00ffff;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    background:#111827;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    body{
+        display:block;
+    }
+
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+    }
+
+    .main{
+        margin-left:0;
+        width:100%;
+    }
+
+    .contact{
+        padding:30px 20px;
+    }
+
+    .contact-container{
+        flex-direction:column;
+    }
+
+    .instruments{
+        padding:30px 20px;
+    }
+}

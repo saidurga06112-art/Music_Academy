@@ -1,0 +1,230 @@
+/* ===========================
+   Durga Music Academy
+   Gallery Page - gallery.css
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    background:linear-gradient(135deg,#4a044e,#701a75,#be185d);
+    color:#fff;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#3b0764;
+    position:fixed;
+    left:0;
+    top:0;
+    padding:20px;
+    overflow:auto;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:3px solid #facc15;
+    margin-bottom:10px;
+}
+
+.logo h2{
+    color:#facc15;
+    font-size:22px;
+}
+
+.sidebar a{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    background:#581c87;
+    padding:14px 18px;
+    margin:12px 0;
+    border-radius:12px;
+    transition:.4s;
+    font-size:17px;
+}
+
+.sidebar a i{
+    margin-right:10px;
+}
+
+.sidebar a:hover,
+.sidebar a.active{
+    background:#facc15;
+    color:#000;
+    box-shadow:
+        0 0 10px #facc15,
+        0 0 20px #facc15,
+        0 0 40px #facc15;
+}
+
+/* Main */
+
+.main{
+    margin-left:250px;
+    width:calc(100% - 250px);
+}
+
+/* Gallery */
+
+.gallery{
+    padding:60px;
+}
+
+.gallery h1{
+    text-align:center;
+    color:#ffe082;
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.gallery>p{
+    text-align:center;
+    font-size:18px;
+    margin-bottom:45px;
+}
+
+
+/* Gallery Grid */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.photo{
+    background:rgba(255,255,255,.12);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.photo:hover{
+    transform:scale(1.05);
+    box-shadow:
+        0 0 15px #facc15,
+        0 0 30px #facc15;
+}
+
+.photo img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.photo h3{
+    text-align:center;
+    color:#ffe082;
+    padding:15px;
+}
+
+
+/* Events Section */
+
+.events{
+    padding:60px;
+}
+
+.events h2{
+    text-align:center;
+    color:#ffe082;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.event-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.event{
+    background:rgba(255,255,255,.12);
+    padding:30px;
+    text-align:center;
+    border-radius:18px;
+    transition:.4s;
+}
+
+.event:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #facc15;
+}
+
+.event i{
+    color:#facc15;
+    margin-bottom:20px;
+}
+
+.event h3{
+    color:#ffe082;
+    margin-bottom:15px;
+}
+
+.event p{
+    line-height:1.6;
+}
+
+
+/* Footer */
+
+footer{
+    background:#3b0764;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    color:#ddd;
+}
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    body{
+        display:block;
+    }
+
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+    }
+
+    .main{
+        margin-left:0;
+        width:100%;
+    }
+
+    .gallery,
+    .events{
+        padding:35px 20px;
+    }
+
+    .gallery h1{
+        font-size:36px;
+    }
+
+    .gallery-grid,
+    .event-box{
+        grid-template-columns:1fr;
+    }
+}
